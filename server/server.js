@@ -8,7 +8,13 @@ const noteRouter = require("./routes/notesRouter");
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(cors(
+    {
+        origin : ["https://vercel-test-one-eta-11.vercel.app"],
+        methods : ["POST","GET"],
+        credentials : true
+    }
+));
 
 //routes
 app.get("/",(req,res)=>{
