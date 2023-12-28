@@ -1,0 +1,28 @@
+  {
+"version": 2,
+ "builds": [
+   {
+     "src": "server.js",
+     "use": "@vercel/node"
+   }
+ ],
+ "routes": [
+   {
+     "src": "/api/users/(.*)",
+     "dest": "/users/$1"
+   },
+   {
+     "src": "/api/notes/(.*)",
+     "dest": "/api/notes/$1"
+   },
+   {
+     "src": "/(.*)",
+     "dest": "/server.js"
+   }
+ ],
+ "env": {
+     "PORT" : "5000",
+     "MONGODB_URL" :"mongodb+srv://notesbpgc:notesbpgc@cluster0.fhnrc7i.mongodb.net/psdiary?retryWrites=true&w=majority",
+     "TOKEN_SECRET" : "hello"
+ }
+}         
