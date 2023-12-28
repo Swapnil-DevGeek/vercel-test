@@ -38,7 +38,7 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:5000",
+  "proxy": "https://vercel-test-server-blue.vercel.app/",
   "devDependencies": {
     "tailwindcss": "^3.3.5"
   }
